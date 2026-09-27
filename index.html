@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FastNeelLife — Frequency Wellness</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">FastNeelLife</div>
+  <div class="badge">Wellness • Relaxation</div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Frequency Wellness Studio</h1>
+    <p>Choose a gentle audio frequency for relaxation, breathing, focus or eye-rest sessions.</p>
+    <div class="notice">
+      Frequencies are presented for relaxation/wellness. This app does not claim to release specific
+      body chemicals, cure disease, or replace medical care.
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Session</h2>
+      <label>Target
+        <select id="target">
+          <option value="relax">Full Body Relaxation</option>
+          <option value="eye">Eye Rest</option>
+          <option value="focus">Calm Focus</option>
+          <option value="sleep">Pre-Sleep Relaxation</option>
+          <option value="breath">Breathing</option>
+        </select>
+      </label>
+
+      <label>Frequency
+        <select id="freq">
+          <option value="174">174 Hz — gentle relaxation</option>
+          <option value="285">285 Hz — relaxation ambience</option>
+          <option value="396">396 Hz — meditation ambience</option>
+          <option value="432">432 Hz — relaxation tone</option>
+          <option value="528">528 Hz — meditation ambience</option>
+          <option value="741">741 Hz — focus/meditation ambience</option>
+          <option value="custom">Custom frequency</option>
+        </select>
+      </label>
+
+      <label id="customWrap" class="hidden">Custom Hz
+        <input id="custom" type="number" min="20" max="20000" value="432">
+      </label>
+
+      <label>Duration
+        <input id="minutes" type="number" min="1" max="120" value="10">
+      </label>
+
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="stop" class="secondary">Stop</button>
+      </div>
+    </div>
+
+    <div class="card visual">
+      <div class="orb" id="orb"></div>
+      <div class="readout"><span id="hz">432</span> Hz</div>
+      <div class="timer" id="timer">10:00</div>
+      <p id="status">Ready</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Wellness guidance</h2>
+    <div id="guidance" class="guidance">
+      <b>Full Body Relaxation:</b> Pair a comfortable volume with slow breathing and a relaxed posture.
+    </div>
+    <ul>
+      <li><b>Eyes:</b> use short sessions, comfortable brightness, and take regular screen breaks. Never stare at a flashing light.</li>
+      <li><b>Sound:</b> keep volume low and stop if you feel pain, dizziness, ringing, headache, or discomfort.</li>
+      <li><b>Medical conditions:</b> this app is not a treatment. Follow advice from a qualified clinician.</li>
+    </ul>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
